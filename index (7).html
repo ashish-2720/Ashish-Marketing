@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Your Name] · Product Marketing Manager</title>
+<meta name="description" content="Product marketing manager with [X] years in [B2B SaaS]. Positioning, launches and sales enablement that moved pipeline [+$X]. Open to new roles.">
+<meta property="og:title" content="[Your Name] · Product Marketing Manager">
+<meta property="og:description" content="Positioning, launches and sales enablement that move pipeline. See the case studies.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf4e2; --card:#fffdf6; --ink:#1d1b1a; --muted:#5f5a52;
+    --red:#e03a2f; --blue:#2a64c8; --yellow:#ffd23f; --line:#1d1b1a;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(rgba(224,58,47,.10) 1.2px,transparent 1.6px);background-size:10px 10px}
+  a{color:inherit}
+  h1,h2,h3{font-family:Bangers,cursive;font-weight:400;letter-spacing:.03em;line-height:1.05}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  section{padding:72px 0}
+  .kicker{display:inline-block;background:var(--yellow);border:2px solid var(--line);font:400 15px Bangers;letter-spacing:.1em;padding:3px 12px 1px;margin-bottom:12px;transform:rotate(-1.5deg)}
+  h2{font-size:clamp(34px,5vw,50px);margin-bottom:10px}
+  .sub{color:var(--muted);max-width:40em;margin-bottom:32px}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:3px solid var(--line)}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  .nav .logo{font:400 24px Bangers;letter-spacing:.05em;text-decoration:none;color:var(--red)}
+  .nav nav{display:flex;gap:22px;align-items:center}
+  .nav nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+  .nav nav a:hover{color:var(--ink)}
+  .btn{display:inline-block;text-decoration:none;font:400 20px Bangers;letter-spacing:.05em;background:var(--red);color:#fff;border:3px solid var(--line);padding:9px 20px 7px;box-shadow:4px 4px 0 var(--line);transition:transform .12s,box-shadow .12s}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--line)}
+  .btn.ghost{background:var(--card);color:var(--ink)}
+  .nav .btn{font-size:17px;padding:6px 14px 4px;box-shadow:3px 3px 0 var(--line)}
+
+  /* HERO */
+  .hero{padding:0 0 56px}
+  .hero-card{background:repeating-conic-gradient(from 0deg at 78% 55%,#2a64c8 0 6deg,#3a78de 6deg 12deg);border:0;border-bottom:5px solid var(--line);padding:72px max(24px,calc((100% - 960px)/2 + 24px)) 120px;position:relative;overflow:hidden}
+  .hero-card::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.3) 1.3px,transparent 1.7px);background-size:10px 10px;opacity:.55;pointer-events:none}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+  .bubble{position:relative;display:inline-block;background:#fff;border:3px solid var(--line);border-radius:22px;padding:8px 18px;font:400 22px Bangers;letter-spacing:.05em;margin-bottom:22px;box-shadow:4px 4px 0 var(--line)}
+  .bubble::after{content:"";position:absolute;left:30px;bottom:-13px;width:20px;height:20px;background:#fff;border-right:3px solid var(--line);border-bottom:3px solid var(--line);transform:rotate(45deg)}
+
+  /* PORTFOLIO COVER (hero) */
+  .folio{position:relative;background:var(--card);border:4px solid var(--line);box-shadow:8px 8px 0 var(--line);transform:rotate(3deg);transition:transform .25s}
+  .folio:hover{transform:rotate(0) translateY(-4px)}
+  .folio-top{display:flex;justify-content:space-between;background:var(--red);color:#fff;border-bottom:4px solid var(--line);padding:6px 12px 3px;font:400 16px Bangers;letter-spacing:.1em}
+  .folio-art{position:relative;height:190px;border-bottom:4px solid var(--line);display:grid;place-items:center;text-align:center;overflow:hidden;
+    background:repeating-conic-gradient(from 0deg at 50% 120%,var(--yellow) 0 8deg,#ffe375 8deg 16deg)}
+  .folio-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(29,27,26,.2) 1.2px,transparent 1.6px);background-size:9px 9px}
+  .folio-art h3{position:relative;font-size:40px;color:var(--red);text-shadow:2px 2px 0 var(--line),-1px -1px 0 var(--line),1px -1px 0 var(--line),-1px 1px 0 var(--line);transform:rotate(-3deg);line-height:.95}
+  .folio-art small{position:relative;display:block;font:400 16px Bangers;letter-spacing:.14em;margin-top:8px}
+  .folio-body{padding:16px;text-align:center}
+  .folio-body .btn{width:100%;font-size:22px}
+  .folio-body p{font-size:13px;color:var(--muted);margin-top:10px}
+  .folio-burst{position:absolute;top:-26px;right:-22px;width:92px;height:92px;display:grid;place-items:center;text-align:center;font:400 19px/.95 Bangers;color:var(--ink);transform:rotate(14deg);isolation:isolate;z-index:2;
+    --burst:polygon(50% 0%,61% 12%,75% 4%,78% 19%,94% 18%,89% 33%,100% 43%,88% 53%,96% 68%,81% 70%,80% 86%,66% 82%,57% 97%,48% 84%,34% 95%,29% 80%,14% 84%,16% 69%,2% 62%,13% 51%,3% 38%,18% 33%,15% 17%,31% 19%,36% 4%,49% 14%)}
+  .folio-burst::before{content:"";position:absolute;inset:0;background:#fff;clip-path:var(--burst);z-index:-1}
+  .folio-burst::after{content:"";position:absolute;inset:-5px;background:var(--ink);clip-path:var(--burst);z-index:-2}
+  .folio.empty .folio-body .btn{background:#9a948a;pointer-events:none}
+
+  /* PORTFOLIO VIEWER */
+  .modal{position:fixed;inset:0;z-index:100;background:rgba(29,27,26,.8);display:none;place-items:center;padding:20px}
+  .modal.open{display:grid}
+  .modal-box{width:min(1000px,100%);height:min(90vh,800px);background:var(--card);border:4px solid var(--line);box-shadow:8px 8px 0 var(--red);display:flex;flex-direction:column}
+  .modal-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--yellow);border-bottom:4px solid var(--line);padding:8px 14px 5px;font:400 22px Bangers;letter-spacing:.06em}
+  .modal-bar a,.modal-bar button{font:400 18px Bangers;letter-spacing:.06em;background:var(--card);border:3px solid var(--line);padding:3px 12px 1px;cursor:pointer;text-decoration:none;color:var(--ink)}
+  .modal-bar a:hover,.modal-bar button:hover{background:var(--red);color:#fff}
+  .modal iframe{flex:1;border:0;width:100%;background:#fff}
+
+  /* COMIC PANEL TOUCHES */
+  .kicker{box-shadow:3px 3px 0 var(--line)}
+  h2{text-shadow:2px 2px 0 rgba(224,58,47,.28)}
+  .proof{position:relative}
+  .proof::after{content:"POWER STATS!";position:absolute;top:-16px;right:18px;background:var(--red);color:#fff;border:3px solid var(--line);font:400 17px Bangers;letter-spacing:.1em;padding:3px 12px 1px;transform:rotate(3deg)}
+  .case{position:relative}
+  .case::before{content:attr(data-n);position:absolute;top:-14px;left:-14px;z-index:2;background:var(--ink);color:#fff;font:400 18px Bangers;letter-spacing:.08em;padding:3px 11px 1px;transform:rotate(-3deg)}
+  .case .result b{text-shadow:2px 2px 0 rgba(255,255,255,.7)}
+  .cta-box h2{transform:rotate(-1.5deg)}
+  .sfx{position:absolute;font:400 52px Bangers;letter-spacing:.04em;color:var(--yellow);text-shadow:3px 3px 0 var(--line),-1px -1px 0 var(--line),1px -1px 0 var(--line),-1px 1px 0 var(--line);pointer-events:none}
+  .cta-box{position:relative;overflow:hidden}
+  .cta-box .sfx{top:18px;left:24px;transform:rotate(-10deg)}
+
+  /* ===== COMIC TRANSITIONS ===== */
+  /* panels "slam" into place; case panels alternate left / right like a comic page */
+  .reveal{opacity:0;transform:scale(1.1) rotate(-1.2deg);transition:opacity .35s ease-out,transform .5s cubic-bezier(.2,1.5,.4,1)}
+  .reveal.from-l{transform:translateX(-70px) rotate(-2deg) scale(.96)}
+  .reveal.from-r{transform:translateX(70px) rotate(2deg) scale(.96)}
+  .hero-card{animation:slam .7s cubic-bezier(.2,1.3,.4,1) both}
+  @keyframes slam{0%{opacity:0;transform:scale(1.25) rotate(-2deg)}60%{opacity:1;transform:scale(.97)}100%{opacity:1;transform:none}}
+
+  /* comic strip scroll progress */
+  .progress{position:fixed;top:0;left:0;height:7px;width:0;z-index:40;border-bottom:2px solid var(--line);
+    background:repeating-linear-gradient(45deg,var(--red) 0 10px,var(--yellow) 10px 20px)}
+
+  /* ===== SUPERHERO ELEMENTS (all original artwork) ===== */
+  html,body{overflow-x:clip}   /* slide-in panels and sound effects must never cause sideways scrolling */
+  .hero-grid{z-index:3}
+  .issue{z-index:4}
+  .hero .folio-body p{color:var(--muted);font-size:13px;margin:10px 0 0;max-width:none}
+  .skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:96px;z-index:1;display:block}
+  .logo{display:inline-flex;align-items:center;gap:8px}
+  .emb{width:26px;height:30px;flex:none}
+  .folio-emb{position:absolute;left:12px;top:12px;width:46px;height:54px;z-index:2;transform:rotate(-8deg);filter:drop-shadow(2px 2px 0 rgba(29,27,26,.5))}
+  .cta-emb{position:absolute;right:-26px;bottom:-40px;width:260px;height:300px;opacity:.22;transform:rotate(12deg);pointer-events:none}
+  .powers h3{font-size:26px;color:var(--red);margin:26px 0 10px}
+  .power{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:12px;padding:3px 0;font-size:14px;font-weight:600}
+  .pips{display:flex;gap:5px}
+  .pips i{display:block;width:34px;height:14px;border:2px solid var(--line);background:#fff;transform:skewX(-18deg)}
+  .pips i.on{background:var(--red);box-shadow:inset 0 -4px 0 rgba(0,0,0,.18)}
+
+  /* ===== HANGING HERO (your supplied image) that descends as you scroll ===== */
+  .climber{position:fixed;top:0;right:20px;width:78px;height:100%;z-index:15;pointer-events:none;--y:62px}
+  .rope{position:absolute;left:35px;top:0;width:2px;height:calc(var(--y) + 8px);background:#2b2b2b}
+  .who{position:absolute;left:0;top:0;width:78px;transform:translateY(var(--y))}
+  .who img{display:block;width:78px;height:236px;transform-origin:36px 0;animation:sway 3.4s ease-in-out infinite;filter:drop-shadow(3px 3px 0 rgba(29,27,26,.3))}
+  @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+  .say{position:absolute;right:92px;top:0;white-space:nowrap;background:#fff;border:3px solid var(--line);border-radius:18px;padding:5px 14px 3px;font:400 22px Bangers;letter-spacing:.05em;box-shadow:3px 3px 0 var(--line);
+    opacity:0;transform:translateY(calc(var(--y) + 170px)) scale(.6);transform-origin:right center;transition:opacity .3s,transform .3s cubic-bezier(.2,1.5,.4,1)}
+  .say::after{content:"";position:absolute;right:-9px;top:50%;margin-top:-6px;width:12px;height:12px;background:#fff;border-right:3px solid var(--line);border-top:3px solid var(--line);transform:rotate(45deg)}
+  .say.on{opacity:1;transform:translateY(calc(var(--y) + 170px)) scale(1)}
+  @media(max-width:900px){.climber{display:none}}
+
+  /* sound effect that pops as each section enters */
+  .pop-host{position:relative}
+  .pop{position:absolute;top:-4px;right:4vw;z-index:6;font:400 clamp(44px,8vw,84px) Bangers;letter-spacing:.04em;color:var(--yellow);-webkit-text-stroke:2px var(--line);text-shadow:4px 4px 0 var(--red);transform:scale(0) rotate(-14deg);opacity:0;pointer-events:none}
+  .pop.go{animation:popin 1.3s ease-out forwards}
+  @keyframes popin{0%{transform:scale(0) rotate(-14deg);opacity:0}18%{transform:scale(1.25) rotate(-8deg);opacity:1}35%{transform:scale(1) rotate(-8deg)}80%{opacity:1}100%{transform:scale(1.05) rotate(-8deg);opacity:0}}
+  .issue{position:absolute;top:0;left:0;background:var(--yellow);border-right:3px solid var(--line);border-bottom:3px solid var(--line);font:400 15px Bangers;letter-spacing:.1em;padding:4px 12px}
+  .hero h1{font-size:clamp(40px,7vw,76px);color:#fff;text-shadow:3px 3px 0 var(--line);max-width:14em;margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .hero p{color:#fff;font-size:19px;max-width:36em;margin-bottom:26px}
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+  .open{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:var(--card);border:2px solid var(--line);padding:5px 14px;font-size:14px;font-weight:600}
+  .dot{width:10px;height:10px;border-radius:50%;background:#1fb26a;box-shadow:0 0 0 3px rgba(31,178,106,.25)}
+
+  /* PROOF STRIP */
+  .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border:3px solid var(--line);background:var(--card);box-shadow:5px 5px 0 var(--line)}
+  .proof div{padding:22px;border-right:3px solid var(--line)}
+  .proof div:last-child{border-right:0}
+  .proof b{display:block;font:400 clamp(40px,5vw,54px) Bangers;color:var(--red);line-height:1}
+  .proof span{font-size:14px;color:var(--muted)}
+  .logos{margin-top:22px;color:var(--muted);font-size:14px}
+  .logos b{font-weight:600;color:var(--ink)}
+
+  /* CASES */
+  .cases{display:grid;gap:34px}
+  .case{background:var(--card);border:3px solid var(--line);box-shadow:6px 6px 0 var(--line);display:grid;grid-template-columns:260px 1fr}
+  .case .result{background:var(--yellow);border-right:3px solid var(--line);padding:28px 24px;display:flex;flex-direction:column;justify-content:center;
+    background-image:radial-gradient(rgba(29,27,26,.14) 1.2px,transparent 1.6px);background-size:9px 9px}
+  .case:nth-child(2) .result{background-color:#9fd9ea}
+  .case:nth-child(3) .result{background-color:#ffb3a8}
+  .case .result small{font:400 14px Bangers;letter-spacing:.12em}
+  .case .result b{font:400 56px/1 Bangers;display:block;margin:4px 0 6px}
+  .case .result span{font-size:14px;font-weight:500}
+  .case .main{padding:26px 28px}
+  .case .meta{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .case h3{font-size:30px;margin:6px 0 10px}
+  .case .why{color:var(--muted);margin-bottom:16px}
+  .case dl{display:grid;grid-template-columns:96px 1fr;gap:8px 14px;font-size:15.5px}
+  .case dt{font:400 17px Bangers;letter-spacing:.08em;color:var(--red);padding-top:1px}
+  .case dd{margin:0}
+  .case .link{display:inline-block;margin-top:16px;font-weight:600;font-size:15px;color:var(--blue)}
+
+  /* TRANSLATOR */
+  .lab{background:var(--ink);color:#fff;border-block:4px solid var(--line)}
+  .lab h2{color:var(--yellow)}
+  .lab .sub{color:#cfc9bd}
+  .lab-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:34px;align-items:start}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font:400 18px Bangers;letter-spacing:.05em;background:var(--card);color:var(--ink);border:3px solid #fff;padding:6px 14px 4px;cursor:pointer;transition:.12s}
+  .chip:hover{background:var(--yellow)}
+  .chip.on{background:var(--yellow)}
+  .out{background:var(--card);color:var(--ink);border:3px solid #fff;padding:22px 24px;min-height:210px}
+  .out .row{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:6px 0;opacity:0;transform:translateY(8px);transition:.4s}
+  .out .row.show{opacity:1;transform:none}
+  .out .row small{font:400 16px Bangers;letter-spacing:.08em;color:var(--red);padding-top:2px}
+  .out .row.final p{font:400 30px/1.1 Bangers;letter-spacing:.03em}
+
+  /* HOW I WORK */
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .how div{background:var(--card);border:3px solid var(--line);padding:22px;box-shadow:4px 4px 0 var(--line)}
+  .how h3{font-size:26px;margin-bottom:6px;color:var(--blue)}
+  .how p{font-size:15.5px;color:var(--muted)}
+
+  /* TESTIMONIAL */
+  .quote{background:var(--card);border:3px solid var(--line);box-shadow:6px 6px 0 var(--line);padding:30px 34px;position:relative}
+  .quote p{font-size:21px;line-height:1.5}
+  .quote cite{display:block;margin-top:14px;font-style:normal;font-weight:600;font-size:15px;color:var(--muted)}
+  .quote::before{content:"\201C";position:absolute;top:-8px;left:14px;font:400 90px Bangers;color:var(--red)}
+  .quote p{padding-top:20px}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+  .about ul{list-style:none;padding:0}
+  .about li{padding:12px 0;border-bottom:2px solid rgba(29,27,26,.15)}
+  .about li b{font-weight:600}
+  .about li small{display:block;color:var(--muted);font-size:14px}
+  .skills{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+  .skills span{background:var(--card);border:2px solid var(--line);font-size:14px;font-weight:500;padding:3px 12px}
+
+  /* CONTACT */
+  .cta-box{background:var(--red);border:4px solid var(--line);box-shadow:8px 8px 0 var(--line);padding:56px 34px;text-align:center;color:#fff;
+    background-image:radial-gradient(rgba(255,255,255,.22) 1.3px,transparent 1.7px);background-size:10px 10px}
+  .cta-box h2{color:var(--yellow);text-shadow:3px 3px 0 var(--line);font-size:clamp(40px,7vw,68px)}
+  .cta-box p{max-width:30em;margin:0 auto 26px;font-size:19px}
+  .cta-box .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-box .btn{background:var(--yellow);color:var(--ink)}
+  .cta-box .btn.ghost{background:var(--card)}
+  footer{text-align:center;padding:10px 20px 50px;font-size:14px;color:var(--muted)}
+
+  .reveal.in,.reveal.from-l.in,.reveal.from-r.in{opacity:1;transform:none}
+
+  @media(max-width:780px){
+    .case{grid-template-columns:1fr}.case .result{border-right:0;border-bottom:3px solid var(--line)}
+    .lab-grid,.about,.how{grid-template-columns:1fr}
+    .nav nav a:not(.btn){display:none}
+    .hero-grid{grid-template-columns:1fr}.folio{transform:rotate(1.5deg);max-width:340px;margin:10px auto 0}
+    .hero-card{padding:52px 22px 110px}
+      .proof div{border-right:0;border-bottom:3px solid var(--line)}.proof div:last-child{border-bottom:0}
+    .case dl{grid-template-columns:1fr;gap:2px}.case dd{margin-bottom:10px}
+    .out .row{grid-template-columns:1fr;gap:0}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}.pop{display:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- original hero emblem, reused in the nav, portfolio card and footer box -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 40 48">
+    <path d="M20 2 L38 8 V22 C38 33 30 41 20 46 C10 41 2 33 2 22 V8 Z" fill="#e03a2f" stroke="#1d1b1a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M23 10 L11 27 H19 L16 39 L29 21 H21 Z" fill="#ffd23f" stroke="#1d1b1a" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="emb" aria-hidden="true"><use href="#emblem"/></svg>[YOUR NAME]</a>
+    <nav>
+      <a href="#work">Case studies</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="hero-card">
+    <span class="issue">ISSUE #1 · PRODUCT MARKETING</span>
+
+    <!-- city skyline silhouette -->
+    <svg class="skyline" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+      <defs><pattern id="win" width="14" height="16" patternUnits="userSpaceOnUse"><rect x="4" y="4" width="5" height="7" fill="#ffd23f"/></pattern></defs>
+      <g fill="#1d1b1a">
+        <rect x="0" y="55" width="70" height="45"/><rect x="70" y="30" width="50" height="70"/><rect x="120" y="65" width="80" height="35"/>
+        <rect x="200" y="15" width="60" height="85"/><rect x="260" y="50" width="90" height="50"/><rect x="350" y="35" width="50" height="65"/>
+        <rect x="400" y="60" width="100" height="40"/><rect x="500" y="10" width="60" height="90"/><rect x="560" y="45" width="80" height="55"/>
+        <rect x="640" y="25" width="50" height="75"/><rect x="690" y="55" width="90" height="45"/><rect x="780" y="20" width="60" height="80"/>
+        <rect x="840" y="50" width="100" height="50"/><rect x="940" y="30" width="60" height="70"/><rect x="1000" y="60" width="80" height="40"/>
+        <rect x="1080" y="12" width="50" height="88"/><rect x="1130" y="45" width="70" height="55"/>
+      </g>
+      <rect x="0" y="0" width="1200" height="100" fill="url(#win)" opacity=".55"/>
+    </svg>
+
+
+    <div class="hero-grid">
+      <div>
+        <div class="bubble">Need a product marketer? Look up!</div>
+        <h1>I turn features into stories buyers <em>act on.</em></h1>
+        <!-- Keep this to ONE sentence a recruiter can repeat: role + years + domain + proof -->
+        <p>Product marketing manager with [X] years in [B2B SaaS / fintech / consumer]. I own positioning, launches and sales enablement, and I tie every message to pipeline and adoption.</p>
+        <div class="actions">
+          <a class="btn" href="#work">See my case studies</a>
+          <a class="btn ghost" href="mailto:you@example.com">Email me</a>
+        </div>
+        <div class="open"><span class="dot"></span>Open to [PMM roles] · [City / Remote] · Available from [month]</div>
+      </div>
+
+      <!-- PORTFOLIO SLOT: set PORTFOLIO_URL in the script at the bottom of this file -->
+      <aside class="folio" id="folio">
+        <div class="folio-burst">READ<br>ME!</div>
+        <svg class="folio-emb" aria-hidden="true"><use href="#emblem"/></svg>
+        <div class="folio-top"><span>MY PORTFOLIO</span><span>#1</span></div>
+        <div class="folio-art"><div><h3>THE CASE<br>FILES</h3><small>[YOUR NAME]</small></div></div>
+        <div class="folio-body">
+          <a class="btn" id="folioBtn" href="#">Open portfolio</a>
+          <p id="folioNote">Decks, launch plans and messaging samples</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROOF ============ -->
+<!-- SAMPLE NUMBERS: replace with your real results, or delete the ones you can't back up -->
+<div class="wrap reveal">
+  <div class="proof">
+    <div><b>+40%</b><span>Demo requests after repositioning [replace]</span></div>
+    <div><b>12</b><span>Launches led end to end [replace]</span></div>
+    <div><b>$2.5M</b><span>Pipeline influenced by launches [replace]</span></div>
+    <div><b>3x</b><span>Feature adoption in 30 days [replace]</span></div>
+  </div>
+  <p class="logos"><b>Worked with:</b> [Company A] · [Company B] · [Company C]</p>
+</div>
+
+<!-- ============ CASE STUDIES ============ -->
+<!-- Lead with your STRONGEST case. Keep each to the same 3 lines: Problem, What I did, Outcome. -->
+<section id="work">
+  <div class="wrap">
+    <span class="kicker">CASE FILES</span>
+    <h2>Three launches, three results</h2>
+    <p class="sub">Each one follows the same format: the problem, what I did, and what changed.</p>
+
+    <div class="cases">
+      <article class="case reveal" data-n="MISSION #1">
+        <div class="result"><small>RESULT</small><b>+40%</b><span>demo requests in 2 quarters [replace]</span></div>
+        <div class="main">
+          <div class="meta">Positioning · [Company] · [Year]</div>
+          <h3>[Repositioning Product X for a new segment]</h3>
+          <p class="why">[One line of context, e.g. "Buyers saw X as a point solution and kept choosing Competitor Y."]</p>
+          <dl>
+            <dt>PROBLEM</dt><dd>[What wasn't working and why it mattered to revenue.]</dd>
+            <dt>MY ROLE</dt><dd>[What you owned and who you worked with.]</dd>
+            <dt>WHAT I DID</dt><dd>[Interviews, win/loss, competitor teardown, new messaging, sales rollout.]</dd>
+          </dl>
+          <a class="link" href="#" target="_blank" rel="noopener">View the messaging doc &rarr;</a>
+        </div>
+      </article>
+
+      <article class="case reveal" data-n="MISSION #2">
+        <div class="result"><small>RESULT</small><b>3x</b><span>feature adoption in 30 days [replace]</span></div>
+        <div class="main">
+          <div class="meta">Go-to-market · [Company] · [Year]</div>
+          <h3>[Launching Feature Z]</h3>
+          <p class="why">[One line on the goal, audience and constraints.]</p>
+          <dl>
+            <dt>PROBLEM</dt><dd>[Launch goal, budget or timeline constraint.]</dd>
+            <dt>MY ROLE</dt><dd>[Launch lead across Product, Sales, CS and Design.]</dd>
+            <dt>WHAT I DID</dt><dd>[Launch tier, channel plan, in-app messaging, webinar, email, PR.]</dd>
+          </dl>
+          <a class="link" href="#" target="_blank" rel="noopener">View the launch plan &rarr;</a>
+        </div>
+      </article>
+
+      <article class="case reveal" data-n="MISSION #3">
+        <div class="result"><small>RESULT</small><b>+18%</b><span>win rate vs. top competitor [replace]</span></div>
+        <div class="main">
+          <div class="meta">Sales enablement · [Company] · [Year]</div>
+          <h3>[Building a competitive intel program]</h3>
+          <p class="why">[One line on the gap you spotted.]</p>
+          <dl>
+            <dt>PROBLEM</dt><dd>[Reps lacked a clear answer to a competitor.]</dd>
+            <dt>MY ROLE</dt><dd>[What you owned.]</dd>
+            <dt>WHAT I DID</dt><dd>[Battlecards, win/loss reviews, objection guide, monthly cadence.]</dd>
+          </dl>
+          <a class="link" href="#" target="_blank" rel="noopener">View the battlecard &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSLATOR ============ -->
+<!-- Edit the DEMOS array at the bottom to use features from the industry you're applying to -->
+<section class="lab">
+  <div class="wrap">
+    <span class="kicker">TRY IT</span>
+    <h2>The feature translator</h2>
+    <p class="sub">Pick a feature and see how I turn it into a headline a buyer cares about.</p>
+    <div class="lab-grid">
+      <div class="chips" id="chips"></div>
+      <div class="out" id="out">
+        <div class="row"><small>FEATURE</small><p></p></div>
+        <div class="row"><small>BENEFIT</small><p></p></div>
+        <div class="row"><small>OUTCOME</small><p></p></div>
+        <div class="row final"><small>HEADLINE</small><p></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW I WORK ============ -->
+<section>
+  <div class="wrap">
+    <span class="kicker">HOW I WORK</span>
+    <h2>Three habits behind every launch</h2>
+    <div class="how reveal" style="margin-top:28px">
+      <div><h3>1. Start with the buyer</h3><p>[Interviews, win/loss and usage data to find the real reason people buy.]</p></div>
+      <div><h3>2. Make it easy to sell</h3><p>[Messaging and enablement that sales actually uses, and how you check.]</p></div>
+      <div><h3>3. Measure what matters</h3><p>[Pipeline, win rate, adoption. Review at 30 days and adjust.]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<!-- Strongest hiring signal on the page: one real quote from a manager, sales lead or PM. Delete this block if you don't have one yet. -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="quote reveal">
+      <p>[A one or two sentence quote from a manager, sales leader or PM about the impact you had on a launch or on the team.]</p>
+      <cite>[Name], [Title] at [Company]</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">ABOUT</span>
+    <h2>Hi, I'm [Your Name]</h2>
+    <div class="about" style="margin-top:24px">
+      <div>
+        <p>[Two or three sentences: your background, what you love about product marketing, and the kind of product and team where you do your best work.]</p>
+        <!-- POWER LEVELS: set data-lvl from 1 to 5. Be honest, you may be asked about these in interviews. -->
+        <div class="powers">
+          <h3>POWER LEVELS</h3>
+          <div class="power" data-lvl="5"><span>Positioning</span><div class="pips"></div></div>
+          <div class="power" data-lvl="5"><span>Messaging</span><div class="pips"></div></div>
+          <div class="power" data-lvl="4"><span>Launch planning</span><div class="pips"></div></div>
+          <div class="power" data-lvl="4"><span>Sales enablement</span><div class="pips"></div></div>
+          <div class="power" data-lvl="4"><span>Competitive intel</span><div class="pips"></div></div>
+          <div class="power" data-lvl="3"><span>Customer research</span><div class="pips"></div></div>
+          <div class="power" data-lvl="3"><span>[Your tool or skill]</span><div class="pips"></div></div>
+        </div>
+      </div>
+      <ul>
+        <li><b>[Latest role]</b><small>[Company · 20XX to Present]</small></li>
+        <li><b>[Previous role]</b><small>[Company · 20XX to 20XX]</small></li>
+        <li><b>[Education]</b><small>[Degree · University]</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <svg class="cta-emb" aria-hidden="true"><use href="#emblem"/></svg>
+      <span class="sfx">POW!</span>
+      <h2>Let's talk!</h2>
+      <p>I'm looking for [product marketing roles at B2B SaaS companies]. Email is fastest, and I reply within a day.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:you@example.com">you@example.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">Download resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Hanging hero: your supplied image (spidey.png) slides down the right edge as the page scrolls -->
+<div class="climber" id="climber" aria-hidden="true">
+  <div class="rope"></div>
+  <div class="say" id="say">Hire me!</div>
+  <div class="who"><img src="jean-philippe-delberghe-9XAnXWHu9_4-unsplash-removebg-preview.png" alt="" width="78" height="236"></div>
+</div>
+
+<!-- Portfolio viewer (opens when the hero portfolio card is clicked and the file is a PDF in this repo) -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Portfolio viewer">
+  <div class="modal-box">
+    <div class="modal-bar">
+      <span>THE PORTFOLIO</span>
+      <span><a id="modalOpen" href="#" target="_blank" rel="noopener">Open in new tab</a> <button id="modalClose" type="button">Close ✕</button></span>
+    </div>
+    <iframe id="modalFrame" title="Portfolio"></iframe>
+  </div>
+</div>
+
+<footer>© <span id="y"></span> [Your Name]</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+/* ===== PORTFOLIO SLOT (hero) =====
+   Set ONE of these:
+   1) A PDF you upload to this repo next to index.html:  PORTFOLIO_URL = 'portfolio.pdf'
+      -> opens in an on-page viewer.
+   2) A link to Notion / Google Drive / Behance / Canva / your site:  PORTFOLIO_URL = 'https://...'
+      -> opens in a new tab (these sites usually block embedding, so they can't show inside the page).
+   Leave it '' and the button shows as "coming soon". */
+const PORTFOLIO_URL = '';
+const folio = document.getElementById('folio'), folioBtn = document.getElementById('folioBtn');
+const modal = document.getElementById('modal'), frame = document.getElementById('modalFrame');
+if(!PORTFOLIO_URL){
+  folio.classList.add('empty'); folioBtn.textContent = 'Coming soon';
+  document.getElementById('folioNote').textContent = 'Set PORTFOLIO_URL in index.html to add yours';
+}else{
+  const isPdf = /\.pdf($|\?|#)/i.test(PORTFOLIO_URL) && !/^https?:\/\//i.test(PORTFOLIO_URL);
+  folioBtn.href = PORTFOLIO_URL;
+  if(isPdf){
+    folioBtn.addEventListener('click',e=>{
+      e.preventDefault(); frame.src = PORTFOLIO_URL;
+      document.getElementById('modalOpen').href = PORTFOLIO_URL; modal.classList.add('open');
+    });
+  }else{ folioBtn.target = '_blank'; folioBtn.rel = 'noopener'; }
+}
+function closeModal(){ modal.classList.remove('open'); frame.src = 'about:blank'; }
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e=>{ if(e.target === modal) closeModal(); });
+addEventListener('keydown', e=>{ if(e.key === 'Escape') closeModal(); });
+
+/* case panels alternate in from the left / right */
+document.querySelectorAll('.case').forEach((c,i)=>c.classList.add(i%2 ? 'from-r' : 'from-l'));
+
+/* slam-in reveal */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* a comic sound effect pops as each section enters (edit the words if you like) */
+const SFX = [['.proof','BAM!'],['#work','WHAM!'],['.lab','ZAP!'],['.how','KAPOW!'],['.quote','WOW!'],['#about','HELLO!']];
+const popIO = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){ e.target.querySelector(':scope > .pop').classList.add('go'); popIO.unobserve(e.target); }
+}),{threshold:.25});
+SFX.forEach(([sel,word])=>{
+  const found = document.querySelector(sel); if(!found) return;
+  const host = found.closest('main > *'); if(!host) return;
+  host.classList.add('pop-host');
+  const p = document.createElement('span'); p.className = 'pop'; p.textContent = word; p.setAttribute('aria-hidden','true');
+  if(sel === '.proof'){ p.style.top = '-92px'; p.style.right = 'auto'; p.style.left = '4vw'; }   /* keep it clear of the stats and tag */
+  host.appendChild(p); popIO.observe(host);
+});
+
+/* comic strip scroll progress bar */
+const bar = document.getElementById('progress');
+const climber = document.getElementById('climber'), say = document.getElementById('say');
+function prog(){
+  const h = document.documentElement.scrollHeight - innerHeight, f = h>0 ? Math.min(1, scrollY/h) : 0;
+  bar.style.width = f*100 + '%';
+  /* the hanging hero descends from just under the nav to the bottom of the screen */
+  climber.style.setProperty('--y', (62 + f*Math.max(0, innerHeight - 62 - 250)) + 'px');
+  say.classList.toggle('on', f > .94);
+}
+addEventListener('resize', prog);
+addEventListener('scroll', prog, {passive:true}); prog();
+
+/* feature translator -- EDIT these to match the industry you're applying to */
+const DEMOS = [
+  {f:'Real-time collaboration',   b:'Teams edit the same file together, with no version chaos.',   o:'Fewer review cycles and faster launches.',   h:'Ship together, not in circles!'},
+  {f:'256-bit encryption',        b:'Customer data stays private, even if something goes wrong.',  o:'Security reviews pass on the first try.',    h:'Say yes to security, then yes to the deal!'},
+  {f:'Drag-and-drop builder',     b:'Anyone can build a workflow without waiting on engineering.', o:'Ideas go live in hours, not sprints.',       h:'Your next idea is one drag away!'},
+  {f:'Usage analytics dashboard', b:'You see which features people really use.',                   o:'Roadmap bets backed by data, not opinions.', h:'Stop guessing. Start knowing!'}
+];
+const chips = document.getElementById('chips');
+const rows = [...document.querySelectorAll('#out .row')];
+let timers = [];
+DEMOS.forEach(d=>{
+  const c = document.createElement('button');
+  c.className = 'chip'; c.textContent = d.f;
+  c.onclick = ()=>{
+    document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); c.classList.add('on');
+    timers.forEach(clearTimeout); timers = [];
+    rows.forEach(r=>r.classList.remove('show'));
+    [d.f,d.b,d.o,d.h].forEach((v,i)=>timers.push(setTimeout(()=>{
+      rows[i].querySelector('p').textContent = v; rows[i].classList.add('show');
+    }, i*450+100)));
+  };
+  chips.appendChild(c);
+});
+chips.firstChild.click();
+
+/* power-level pips */
+document.querySelectorAll('.power').forEach(p=>{
+  const n = Math.max(0, Math.min(5, +p.dataset.lvl || 0));
+  p.querySelector('.pips').innerHTML = Array.from({length:5},(_,i)=>`<i class="${i<n?'on':''}"></i>`).join('');
+  p.setAttribute('aria-label', p.querySelector('span').textContent + ': ' + n + ' out of 5');
+});
+
+/* Hanging figure: the file in the repo is the full 612x408 cutout, so show just the figure (crop).
+   If the file is missing or a different size, fall back to the small pre-cropped spidey.png. */
+(function(){
+  const img = document.querySelector('.who img'); if(!img) return;
+  function fallback(){ img.style.objectFit = ''; img.style.objectPosition = ''; img.onload = img.onerror = null; img.src = 'spidey.png'; }
+  function check(){
+    if(img.naturalWidth === 612 && img.naturalHeight === 408){ img.style.objectFit = 'none'; img.style.objectPosition = '-300px 0'; }
+    else fallback();
+  }
+  img.onerror = fallback;
+  if(img.complete){ img.naturalWidth ? check() : fallback(); } else img.onload = check;
+})();
+</script>
+</body>
+</html>
